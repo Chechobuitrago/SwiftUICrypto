@@ -9,16 +9,28 @@
 /* Begin PBXBuildFile section */
 		9F6551BB2C78EF730023633F /* SwiftUICryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551BA2C78EF730023633F /* SwiftUICryptoApp.swift */; };
 		9F6551BD2C78EF730023633F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551BC2C78EF730023633F /* ContentView.swift */; };
-		9F6551BF2C78EF740023633F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6551BE2C78EF740023633F /* Assets.xcassets */; };
 		9F6551C22C78EF740023633F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6551C12C78EF740023633F /* Preview Assets.xcassets */; };
+		9F6551C92C78F0440023633F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6551C82C78F0440023633F /* Assets.xcassets */; };
+		9F6551D42C78F0F50023633F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551CD2C78F0F50023633F /* Color.swift */; };
+		9F6551D52C78F0F50023633F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551CE2C78F0F50023633F /* Date.swift */; };
+		9F6551D62C78F0F50023633F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551CF2C78F0F50023633F /* Double.swift */; };
+		9F6551D72C78F0F50023633F /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551D02C78F0F50023633F /* PreviewProvider.swift */; };
+		9F6551D82C78F0F50023633F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551D12C78F0F50023633F /* String.swift */; };
+		9F6551D92C78F0F50023633F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6551D22C78F0F50023633F /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F6551B72C78EF730023633F /* SwiftUICrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6551BA2C78EF730023633F /* SwiftUICryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICryptoApp.swift; sourceTree = "<group>"; };
 		9F6551BC2C78EF730023633F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9F6551BE2C78EF740023633F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F6551C12C78EF740023633F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9F6551C82C78F0440023633F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Resources/Assets.xcassets; sourceTree = "<group>"; };
+		9F6551CD2C78F0F50023633F /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9F6551CE2C78F0F50023633F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		9F6551CF2C78F0F50023633F /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		9F6551D02C78F0F50023633F /* PreviewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		9F6551D12C78F0F50023633F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		9F6551D22C78F0F50023633F /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				9F6551BA2C78EF730023633F /* SwiftUICryptoApp.swift */,
+				9F6551D32C78F0F50023633F /* Extensions */,
 				9F6551BC2C78EF730023633F /* ContentView.swift */,
-				9F6551BE2C78EF740023633F /* Assets.xcassets */,
+				9F6551C82C78F0440023633F /* Assets.xcassets */,
 				9F6551C02C78EF740023633F /* Preview Content */,
 			);
 			path = SwiftUICrypto;
@@ -65,6 +78,19 @@
 				9F6551C12C78EF740023633F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F6551D32C78F0F50023633F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F6551CD2C78F0F50023633F /* Color.swift */,
+				9F6551CE2C78F0F50023633F /* Date.swift */,
+				9F6551CF2C78F0F50023633F /* Double.swift */,
+				9F6551D02C78F0F50023633F /* PreviewProvider.swift */,
+				9F6551D12C78F0F50023633F /* String.swift */,
+				9F6551D22C78F0F50023633F /* UIApplication.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F6551C22C78EF740023633F /* Preview Assets.xcassets in Resources */,
-				9F6551BF2C78EF740023633F /* Assets.xcassets in Resources */,
+				9F6551C92C78F0440023633F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6551D92C78F0F50023633F /* UIApplication.swift in Sources */,
 				9F6551BD2C78EF730023633F /* ContentView.swift in Sources */,
+				9F6551D72C78F0F50023633F /* PreviewProvider.swift in Sources */,
 				9F6551BB2C78EF730023633F /* SwiftUICryptoApp.swift in Sources */,
+				9F6551D42C78F0F50023633F /* Color.swift in Sources */,
+				9F6551D82C78F0F50023633F /* String.swift in Sources */,
+				9F6551D62C78F0F50023633F /* Double.swift in Sources */,
+				9F6551D52C78F0F50023633F /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +306,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICrypto/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +335,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICrypto/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
