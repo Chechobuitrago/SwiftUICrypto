@@ -28,6 +28,7 @@
 		9F6C0FED2C7E1B1C00111575 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C0FEC2C7E1B1C00111575 /* CoinImageView.swift */; };
 		9F6C0FEF2C7E1C5D00111575 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C0FEE2C7E1C5D00111575 /* CoinImageService.swift */; };
 		9F6C0FF12C7E1D9E00111575 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C0FF02C7E1D9E00111575 /* CoinImageViewModel.swift */; };
+		9F6C0FF32C7E296C00111575 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C0FF22C7E296C00111575 /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		9F6C0FEC2C7E1B1C00111575 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		9F6C0FEE2C7E1C5D00111575 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		9F6C0FF02C7E1D9E00111575 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		9F6C0FF22C7E296C00111575 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				9F5F732B2C7CDC0B00B44E2A /* NetworkingManager.swift */,
+				9F6C0FF22C7E296C00111575 /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				9F6551D92C78F0F50023633F /* UIApplication.swift in Sources */,
 				9F5F732C2C7CDC0B00B44E2A /* NetworkingManager.swift in Sources */,
 				9F6551BD2C78EF730023633F /* ContentView.swift in Sources */,
+				9F6C0FF32C7E296C00111575 /* LocalFileManager.swift in Sources */,
 				9F5F73222C7A952600B44E2A /* CoinModel.swift in Sources */,
 				9F6551D72C78F0F50023633F /* PreviewProvider.swift in Sources */,
 				9F6551BB2C78EF730023633F /* SwiftUICryptoApp.swift in Sources */,
