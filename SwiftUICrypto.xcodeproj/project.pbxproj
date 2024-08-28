@@ -29,6 +29,7 @@
 		9F6C0FEF2C7E1C5D00111575 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C0FEE2C7E1C5D00111575 /* CoinImageService.swift */; };
 		9F6C0FF12C7E1D9E00111575 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C0FF02C7E1D9E00111575 /* CoinImageViewModel.swift */; };
 		9F6C0FF32C7E296C00111575 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C0FF22C7E296C00111575 /* LocalFileManager.swift */; };
+		9FAA771D2C7F6DCC005539D6 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA771C2C7F6DCC005539D6 /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		9F6C0FEE2C7E1C5D00111575 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		9F6C0FF02C7E1D9E00111575 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 		9F6C0FF22C7E296C00111575 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		9FAA771C2C7F6DCC005539D6 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			children = (
 				9F6C0FEB2C7E1B0C00111575 /* CoinImage */,
 				9F6551E12C78F8DC0023633F /* CircleButton */,
+				9FAA771C2C7F6DCC005539D6 /* SearchBarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				9F6C0FF32C7E296C00111575 /* LocalFileManager.swift in Sources */,
 				9F5F73222C7A952600B44E2A /* CoinModel.swift in Sources */,
 				9F6551D72C78F0F50023633F /* PreviewProvider.swift in Sources */,
+				9FAA771D2C7F6DCC005539D6 /* SearchBarView.swift in Sources */,
 				9F6551BB2C78EF730023633F /* SwiftUICryptoApp.swift in Sources */,
 				9F6551D42C78F0F50023633F /* Color.swift in Sources */,
 				9F5F73262C7AB43200B44E2A /* HomeViewModel.swift in Sources */,
