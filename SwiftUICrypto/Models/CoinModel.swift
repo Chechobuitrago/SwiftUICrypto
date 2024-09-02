@@ -1,8 +1,8 @@
 //
 //  CoinModel.swift
-//  SwiftfulCrypto
+//  SwiftUICrypto
 //
-//  Created by Nick Sarno on 5/8/21.
+//   Created by Sergio Buitrago on 1/09/24.
 //
 
 import Foundation

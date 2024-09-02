@@ -51,10 +51,12 @@ struct HomeView: View {
         }
         .background (
             NavigationStack {
-                EmptyView()
+                
             }.navigationDestination(isPresented: $showDetailView, destination: {
                 DetailLoadingView(coin: $selectedCoin)
+                    .navigationTitle($selectedCoin.wrappedValue?.name ?? "")
             })
+//            .navigationTitle($selectedCoin != nil ? $selectedCoin.wrappedValue?.name ?? "" : "")
         )
     }
 }
