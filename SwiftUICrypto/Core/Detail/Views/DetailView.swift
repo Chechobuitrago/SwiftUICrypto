@@ -25,26 +25,35 @@ struct DetailView: View {
         GridItem(.flexible()),
         GridItem(.flexible()),
     ]
-    private let spacing: CGFloat = 38
-
+    private let spacing: CGFloat = 30
+    
     init(coin: CoinModel) {
         _vm = StateObject(wrappedValue: DetailViewModel(coin: coin))
     }
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                Text("")
-                    .frame(height: 150)
-                overViewTittle
-                Divider()
-                overviewGrid
-                additionalTittle
-                Divider()
-                additionalGrid
+            VStack {
+                ChartView(coin: vm.coin)
+                    .padding(.vertical)
+                VStack(spacing: 20) {
+                    overViewTittle
+                    Divider()
+                    overviewGrid
+                    additionalTittle
+                    Divider()
+                    additionalGrid
+                }
+                .padding()
             }
-            .padding()
+            
         }
         .navigationTitle(vm.coin.name)
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                topBarTrailingItems
+            }
+        }
     }
 }
 
@@ -56,6 +65,16 @@ struct DetailView: View {
 
 
 extension DetailView {
+    
+    private var topBarTrailingItems: some View {
+        HStack {
+            Text(vm.coin.symbol.uppercased())
+                .font(.headline)
+                .foregroundStyle(Color.theme.secondaryText)
+            CoinImageView(coin: vm.coin)
+                .frame(width: 25, height: 25)
+        }
+    }
     
     private var overViewTittle: some View {
         Text("Overview")

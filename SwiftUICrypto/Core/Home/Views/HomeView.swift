@@ -17,47 +17,43 @@ struct HomeView: View {
     @State private var showDetailView: Bool = false
     
     var body: some View {
-        ZStack {
-            // background layer
-            Color.theme.background
-                .ignoresSafeArea()
-                .sheet(isPresented: $showPortfolioView, content: {
-                    PortfolioView()
-                        .environmentObject(vm)
-                })
-            
-            // content layer
-            VStack {
-                homeHeader
+        NavigationStack {
+            ZStack {
+                // background layer
+                Color.theme.background
+                    .ignoresSafeArea()
+                    .sheet(isPresented: $showPortfolioView, content: {
+                        PortfolioView()
+                            .environmentObject(vm)
+                    })
                 
-                HomeStatsView(showPortfolio: $showPortfolio)
-                
-                SearchBarView(searchText: $vm.searchText)
-                
-                columnTitles
-                
-                
-                if !showPortfolio {
-                    allCoinsList
-                        .transition(.move(edge: .leading))
+                // content layer
+                VStack {
+                    homeHeader
+                    
+                    HomeStatsView(showPortfolio: $showPortfolio)
+                    
+                    SearchBarView(searchText: $vm.searchText)
+                    
+                    columnTitles
+                    
+                    
+                    if !showPortfolio {
+                        allCoinsList
+                            .transition(.move(edge: .leading))
+                    }
+                    if showPortfolio {
+                        portfolioCoinsList
+                            .transition(.move(edge: .trailing))
+                    }
+                    
+                    Spacer(minLength: 0)
                 }
-                if showPortfolio {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
-                }
-                
-                Spacer(minLength: 0)
+            }
+            .navigationDestination(isPresented: $showDetailView) {
+                DetailLoadingView(coin: $selectedCoin)
             }
         }
-        .background (
-            NavigationStack {
-                
-            }.navigationDestination(isPresented: $showDetailView, destination: {
-                DetailLoadingView(coin: $selectedCoin)
-                    .navigationTitle($selectedCoin.wrappedValue?.name ?? "")
-            })
-//            .navigationTitle($selectedCoin != nil ? $selectedCoin.wrappedValue?.name ?? "" : "")
-        )
     }
 }
 
