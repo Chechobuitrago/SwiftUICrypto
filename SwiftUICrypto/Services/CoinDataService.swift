@@ -32,6 +32,9 @@ class CoinDataService {
          */
             .decode(type: [CoinModel].self, decoder: JSONDecoder())
         
+            .receive(on: DispatchQueue.main)
+
+        
         /*
           sink es un subscriber que recibe dos closures:
              •   Closure de finalización (completion): Aquí se maneja la terminación

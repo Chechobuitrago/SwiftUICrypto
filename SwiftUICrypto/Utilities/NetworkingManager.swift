@@ -36,8 +36,9 @@ class NetworkingManager {
              se realizará en un thread de fondo (background thread).
              Esto es importante para no bloquear el
              thread principal mientras se realiza la solicitud de red.
+             (Ya se ejecuta en el background thread)
              */
-                .subscribe(on: DispatchQueue.global(qos: .default))
+            //.subscribe(on: DispatchQueue.global(qos: .default))
             
             /*
              Aquí es donde se manipulan los datos recibidos del publisher.
@@ -48,12 +49,19 @@ class NetworkingManager {
                 .tryMap({try handleURLResponse(output: $0, url: url)})
             
             /*
+             Si la descarga de la informacion llega a fallar, lo que hace
+             es volver a intentar la descarga un numero de veces que se le
+             le pasa por parametro, en este caso (3)
+             */
+                .retry(3)
+            
+            /*
              Esto asegura que cualquier procesamiento posterior
              (en este caso, la actualización de la propiedad allCoins)
              se realice en el thread principal, que es donde
              se deben hacer las actualizaciones de UI.
              */
-                .receive(on: DispatchQueue.main)
+//                .receive(on: DispatchQueue.main)
                 .eraseToAnyPublisher()
         }
         

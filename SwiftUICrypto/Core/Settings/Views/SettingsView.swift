@@ -60,7 +60,7 @@ extension SettingsView {
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .padding(.trailing, 0)
                 }
-                Text("TThis app was built by Sergio Buitrago entirely in Swift using SwiftUI. It harnesses MVVM architecture, Combine, and CoreData for multi-threading, real-time updates, and data persistence—making it both efficient and scalable.")
+                Text("This app was built by Sergio Buitrago entirely in Swift using SwiftUI. It harnesses MVVM architecture, Combine, and CoreData for multi-threading, real-time updates, and data persistence—making it both efficient and scalable.")
                     .font(.callout)
                     .fontWeight(.medium)
                     .foregroundStyle(Color.theme.accent)
