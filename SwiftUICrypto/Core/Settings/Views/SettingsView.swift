@@ -17,11 +17,19 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                // Creator Section
-                creatorSection
-                coinGeckoSection
-                applicationSection
+            ZStack {
+                // Background
+                Color.theme.background.ignoresSafeArea()
+                // Content
+                List {
+                    creatorSection
+                        .listRowBackground(Color.theme.backgroundRow.opacity(0.6))
+                    coinGeckoSection
+                        .listRowBackground(Color.theme.backgroundRow.opacity(0.6))
+                    applicationSection
+                        .listRowBackground(Color.theme.backgroundRow.opacity(0.6))
+                }
+                .scrollContentBackground(.hidden)
             }
             .font(.headline)
             .tint(.blue)
@@ -51,7 +59,7 @@ extension SettingsView {
                     Image("imagenSergio")
                         .resizable()
                         .frame(width: 130, height: 130)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
                     Spacer()
                     Image("logo")
                         .resizable()
@@ -60,7 +68,7 @@ extension SettingsView {
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .padding(.trailing, 0)
                 }
-                Text("This app was built by Sergio Buitrago entirely in Swift using SwiftUI. It harnesses MVVM architecture, Combine, and CoreData for multi-threading, real-time updates, and data persistence—making it both efficient and scalable.")
+                Text("This application was built entirely in Swift using SwiftUI by Sergio Buitrago. It uses the MVVM architecture, Combine, and CoreData for multi-threading, real-time updates, and data persistence, making it both efficient and scalable.")
                     .font(.callout)
                     .fontWeight(.medium)
                     .foregroundStyle(Color.theme.accent)
@@ -91,11 +99,27 @@ extension SettingsView {
     }
     private var applicationSection: some View {
         Section {
-           Link("Terms of Service", destination: defaultURL)
-           Link("Privacy Policy", destination: defaultURL)
-           Link("Company Website", destination: defaultURL)
-           Link("Learn More", destination: defaultURL)
+            Link("Terms of Service", destination: defaultURL)
+            Link("Privacy Policy", destination: defaultURL)
+            Link("Company Website", destination: defaultURL)
+            Link("Learn More", destination: defaultURL)
         }
     header: {Text("Aplication")}
+    }
+    
+    private var testingSection: some View {
+        Section(header: Text("Prueba")) {
+            VStack{
+                Image("coingecko")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 100)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                Text("The cryptocurrency data that is used in this app comes from a free API from CoinGecko Price may be slightly delayed.")
+                    .font(.callout)
+                    .fontWeight(.medium)
+                    .foregroundStyle(Color.theme.accent)
+            }
+        }
     }
 }

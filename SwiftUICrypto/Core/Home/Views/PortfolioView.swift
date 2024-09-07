@@ -26,6 +26,9 @@ struct PortfolioView: View {
                     }
                 }
             }
+            .background(
+                Color.theme.background.ignoresSafeArea()
+            )
             .navigationTitle("Edit Portfolio")
             .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
@@ -141,7 +144,7 @@ extension PortfolioView {
     }
     
     private func saveButtonPresed() {
-        guard 
+        guard
             let coin = selectedCoin,
             let amount = Double(quantityText)
         else { return }
